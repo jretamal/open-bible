@@ -109,7 +109,7 @@ export function dateOfKey(key: string, year = new Date().getFullYear()): Date | 
 export const dateStamp = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
 /** Languages with their own pack. The others read the English one. */
-const PACKS = ['pt-BR', 'en'] as const;
+const PACKS = ['es', 'pt-BR', 'en'] as const;
 export type PackLang = (typeof PACKS)[number];
 export const packLang = (ui: UiLang): PackLang => ((PACKS as readonly string[]).includes(ui) ? (ui as PackLang) : 'en');
 
