@@ -340,6 +340,17 @@ const ptBR: Messages = {
   verseImageShare: 'Compartilhar',
   verseImageCopy: 'Copiar imagem',
   verseImageCopied: 'Imagem copiada para a área de transferência',
+  bookmark: 'Marcador',
+  bookmarkAdd: 'Marcar capítulo',
+  bookmarkRemove: 'Remover marcador',
+  bookmarked: 'Marcador salvo',
+  bookmarkRemoved: 'Marcador removido',
+  studyBookmarks: 'Marcadores',
+  bookmarksEmpty: 'Nenhum marcador ainda',
+  bookmarksEmptyHint: 'Toque no ícone de marcador na barra superior ou ao selecionar um versículo para lembrar de onde parou.',
+  bookmarkEditLabel: 'Editar etiqueta',
+  bookmarkLabelPlaceholder: 'ex. Leitura diária, Memorizar...',
+  bookmarkSave: 'Salvar',
 };
 
 export default ptBR;

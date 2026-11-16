@@ -340,6 +340,17 @@ const de: Messages = {
   verseImageShare: 'Teilen',
   verseImageCopy: 'Bild kopieren',
   verseImageCopied: 'Bild in die Zwischenablage kopiert',
+  bookmark: 'Lesezeichen',
+  bookmarkAdd: 'Kapitel merken',
+  bookmarkRemove: 'Lesezeichen entfernen',
+  bookmarked: 'Lesezeichen gespeichert',
+  bookmarkRemoved: 'Lesezeichen entfernt',
+  studyBookmarks: 'Lesezeichen',
+  bookmarksEmpty: 'Noch keine Lesezeichen',
+  bookmarksEmptyHint: 'Tippe auf das Lesezeichen-Symbol in der oberen Leiste oder bei der Versauswahl, um deine Lesestelle zu speichern.',
+  bookmarkEditLabel: 'Bezeichnung bearbeiten',
+  bookmarkLabelPlaceholder: 'z. B. Tägliche Lesung, Auswendiglernen...',
+  bookmarkSave: 'Speichern',
 };
 
 export default de;

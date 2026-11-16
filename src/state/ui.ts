@@ -8,7 +8,7 @@ interface Toast {
   action?: { label: string; run: () => void };
 }
 
-export type StudyTab = 'verses' | 'devotionals';
+export type StudyTab = 'verses' | 'bookmarks' | 'devotionals';
 
 interface UIStore {
   sheet: SheetName;

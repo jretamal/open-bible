@@ -340,6 +340,17 @@ const ja: Messages = {
   verseImageShare: '共有',
   verseImageCopy: '画像をコピー',
   verseImageCopied: '画像をクリップボードにコピーしました',
+  bookmark: 'しおり',
+  bookmarkAdd: '章にしおりを挟む',
+  bookmarkRemove: 'しおりを削除',
+  bookmarked: 'しおりを保存しました',
+  bookmarkRemoved: 'しおりを削除しました',
+  studyBookmarks: 'しおり',
+  bookmarksEmpty: 'しおりはまだありません',
+  bookmarksEmptyHint: '上部バーまたは節を選択した時のしおりアイコンをタップして、読書の場所を保存できます。',
+  bookmarkEditLabel: 'ラベルを編集',
+  bookmarkLabelPlaceholder: '例：毎日の読書、暗記...',
+  bookmarkSave: '保存',
 };
 
 export default ja;

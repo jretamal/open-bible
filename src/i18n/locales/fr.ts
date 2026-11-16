@@ -340,6 +340,17 @@ const fr: Messages = {
   verseImageShare: 'Partager',
   verseImageCopy: 'Copier l’image',
   verseImageCopied: 'Image copiée dans le presse-papiers',
+  bookmark: 'Marque-page',
+  bookmarkAdd: 'Marquer le chapitre',
+  bookmarkRemove: 'Supprimer le marque-page',
+  bookmarked: 'Marque-page enregistré',
+  bookmarkRemoved: 'Marque-page supprimé',
+  studyBookmarks: 'Marque-pages',
+  bookmarksEmpty: 'Aucun marque-page pour l’instant',
+  bookmarksEmptyHint: 'Touchez l’icône de marque-page dans la barre supérieure ou en sélectionnant un verset pour enregistrer votre lecture.',
+  bookmarkEditLabel: 'Modifier le libellé',
+  bookmarkLabelPlaceholder: 'ex. Lecture quotidienne, Mémoriser...',
+  bookmarkSave: 'Enregistrer',
 };
 
 export default fr;

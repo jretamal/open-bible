@@ -338,6 +338,17 @@ const en = {
   verseImageShare: 'Share',
   verseImageCopy: 'Copy image',
   verseImageCopied: 'Image copied to clipboard',
+  bookmark: 'Bookmark',
+  bookmarkAdd: 'Bookmark chapter',
+  bookmarkRemove: 'Remove bookmark',
+  bookmarked: 'Bookmark saved',
+  bookmarkRemoved: 'Bookmark removed',
+  studyBookmarks: 'Bookmarks',
+  bookmarksEmpty: 'No bookmarks yet',
+  bookmarksEmptyHint: 'Tap the bookmark icon in the top bar or when selecting a verse to save your reading spot.',
+  bookmarkEditLabel: 'Edit label',
+  bookmarkLabelPlaceholder: 'e.g. Daily reading, Memorize...',
+  bookmarkSave: 'Save',
 };
 
 export default en;

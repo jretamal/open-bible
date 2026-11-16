@@ -340,6 +340,17 @@ const es: Messages = {
   verseImageShare: 'Compartir',
   verseImageCopy: 'Copiar imagen',
   verseImageCopied: 'Imagen copiada al portapapeles',
+  bookmark: 'Marcador',
+  bookmarkAdd: 'Marcar capítulo',
+  bookmarkRemove: 'Quitar marcador',
+  bookmarked: 'Marcador guardado',
+  bookmarkRemoved: 'Marcador eliminado',
+  studyBookmarks: 'Marcadores',
+  bookmarksEmpty: 'No tienes marcadores aún',
+  bookmarksEmptyHint: 'Toca el icono de marcador en la barra superior o al seleccionar un versículo para recordar dónde vas.',
+  bookmarkEditLabel: 'Editar etiqueta',
+  bookmarkLabelPlaceholder: 'ej. Lectura diaria, Memorizar...',
+  bookmarkSave: 'Guardar',
 };
 
 export default es;

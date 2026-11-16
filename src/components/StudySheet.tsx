@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowDown, ArrowUp, BookOpen, CalendarBlank, Heart, Notebook, Notepad, PencilSimple } from '@phosphor-icons/react';
+import { ArrowDown, ArrowUp, BookmarkSimple, BookOpen, CalendarBlank, Heart, Notebook, Notepad, PencilSimple, Trash } from '@phosphor-icons/react';
 import { Button, IconButton } from './Button';
 import { NoteSheet } from './NoteSheet';
 import { SearchField } from './SearchField';
@@ -12,6 +12,7 @@ import { useBookName } from '../hooks';
 import { useDevotional } from '../state/devotional';
 import { useSettings } from '../state/settings';
 import { useStudy, type HlColor } from '../state/study';
+import { useBookmarks, type Bookmark } from '../state/bookmarks';
 import { useUI, type StudyTab } from '../state/ui';
 import { refLabel } from '../ref';
 import { track, trackFeature } from '../analytics';
@@ -55,6 +56,9 @@ export function StudySheet() {
   // The tab comes from whoever opened the sheet (the "See" shortcut of the devotional opens it on the liked ones).
   const [tab, setTab] = useState<StudyTab>(() => useUI.getState().studyTab);
   const [likeDir, setLikeDir] = useState<SortDir>('desc');
+  const { bookmarks, removeBookmark, updateLabel } = useBookmarks();
+  const [editingBookmarkId, setEditingBookmarkId] = useState<string | null>(null);
+  const [bookmarkLabelInput, setBookmarkLabelInput] = useState<string>('');
   useEffect(() => () => useUI.setState({ studyTab: 'verses' }), []);
   useEffect(() => {
     if (tab !== 'devotionals') return;
@@ -113,6 +117,22 @@ export function StudySheet() {
       .sort((a, b) => sign * (a.at - b.at));
   }, [likes, pack, q, likeDir, likeDate, bookName]);
 
+  const bookmarkEntries = useMemo(() => {
+    const needle = q.trim().toLowerCase();
+    const sign = sort.dir === 'asc' ? 1 : -1;
+    const byBible = (a: Bookmark, b: Bookmark) =>
+      bookIndex(a.book) - bookIndex(b.book) || a.chapter - b.chapter || (a.verse || 0) - (b.verse || 0);
+    const byDate = (a: Bookmark, b: Bookmark) => a.createdAt - b.createdAt;
+    return bookmarks
+      .filter((b) => {
+        if (!needle) return true;
+        const ref = refLabel(bookName(b.book), b.chapter, b.verse, b.verse).toLowerCase();
+        const lbl = (b.label || '').toLowerCase();
+        return ref.includes(needle) || lbl.includes(needle);
+      })
+      .sort((a, b) => sign * (sort.key === 'date' ? byDate(a, b) || byBible(a, b) : byBible(a, b)));
+  }, [bookmarks, q, sort, bookName]);
+
   const openLike = (key: string) => {
     const date = dateOfKey(key);
     if (!date) return;
@@ -147,6 +167,7 @@ export function StudySheet() {
               onChange={pickTab}
               options={[
                 { value: 'verses', label: t('studyVerses') },
+                { value: 'bookmarks', label: t('studyBookmarks') },
                 { value: 'devotionals', label: t('studyDevotionals') },
               ]}
             />
@@ -197,7 +218,93 @@ export function StudySheet() {
           </div>
         }
       >
-      {tab === 'devotionals' ? (
+      {tab === 'bookmarks' ? (
+        <>
+          {bookmarkEntries.length === 0 && (
+            <Empty
+              icon={BookmarkSimple}
+              hint={!q && t('bookmarksEmptyHint')}
+            >
+              {t(q ? 'studyNoMatch' : 'bookmarksEmpty')}
+            </Empty>
+          )}
+
+          {bookmarkEntries.map((b) => (
+            <div key={b.id} className="entry-row">
+              <button
+                className="entry"
+                onClick={() => {
+                  goTo(b.book, b.chapter, b.verse);
+                  close();
+                }}
+              >
+                <div className="ref">
+                  <BookmarkSimple size={16} weight="fill" style={{ color: 'var(--accent)', flexShrink: 0 }} />
+                  {refLabel(bookName(b.book), b.chapter, b.verse, b.verse)}
+                  <span className="date">{fmtDay.format(b.createdAt)}</span>
+                </div>
+                {editingBookmarkId === b.id ? (
+                  <div
+                    className="bookmark-edit-wrap"
+                    onClick={(e) => e.stopPropagation()}
+                    style={{ display: 'flex', gap: '8px', marginTop: '8px' }}
+                  >
+                    <input
+                      type="text"
+                      className="field-input"
+                      style={{ flex: 1, padding: '4px 8px', borderRadius: '8px', border: '1px solid var(--line)', background: 'var(--surface)', color: 'var(--fg)', fontSize: '14px' }}
+                      value={bookmarkLabelInput}
+                      placeholder={t('bookmarkLabelPlaceholder')}
+                      autoFocus
+                      onChange={(e) => setBookmarkLabelInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          updateLabel(b.id, bookmarkLabelInput);
+                          setEditingBookmarkId(null);
+                        } else if (e.key === 'Escape') {
+                          setEditingBookmarkId(null);
+                        }
+                      }}
+                    />
+                    <Button
+                      size="sm"
+                      variant="primary"
+                      onClick={() => {
+                        updateLabel(b.id, bookmarkLabelInput);
+                        setEditingBookmarkId(null);
+                      }}
+                    >
+                      {t('bookmarkSave')}
+                    </Button>
+                  </div>
+                ) : (
+                  b.label && <p className="nt" style={{ fontStyle: 'italic', color: 'var(--muted)', marginTop: '4px' }}>🏷️ {b.label}</p>
+                )}
+              </button>
+              <IconButton
+                className="entry-edit"
+                icon={PencilSimple}
+                label={t('bookmarkEditLabel')}
+                onClick={() => {
+                  if (editingBookmarkId === b.id) {
+                    setEditingBookmarkId(null);
+                  } else {
+                    setEditingBookmarkId(b.id);
+                    setBookmarkLabelInput(b.label || '');
+                  }
+                }}
+              />
+              <IconButton
+                className="entry-edit"
+                icon={Trash}
+                tone="danger"
+                label={t('bookmarkRemove')}
+                onClick={() => removeBookmark(b.id)}
+              />
+            </div>
+          ))}
+        </>
+      ) : tab === 'devotionals' ? (
         <>
           {likeEntries.length === 0 && (
             <Empty

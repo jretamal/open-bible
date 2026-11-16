@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { CaretLeft, CaretRight, List, MagnifyingGlass, NotePencil, SpeakerHigh, SpeakerSlash, TextAa } from '@phosphor-icons/react';
+import { BookmarkSimple, CaretLeft, CaretRight, List, MagnifyingGlass, NotePencil, SpeakerHigh, SpeakerSlash, TextAa } from '@phosphor-icons/react';
+import { useBookmarks } from '../state/bookmarks';
 import { abbrOf, findVersion } from '../data/catalog';
 import { useBookName, useBooks, useChapter } from '../hooks';
 import { useLibrary } from '../state/library';
@@ -38,6 +39,12 @@ export function Reader() {
   const [tabV, setTabV] = useState(1);
   const [dir, setDir] = useState<'next' | 'prev' | null>(null);
   const touch = useRef<{ x: number; y: number } | null>(null);
+
+  const isBookmarked = useBookmarks((s) => s.bookmarks.some((b) => b.book === book && b.chapter === chapter && !b.verse));
+  const onToggleBookmark = () => {
+    const added = useBookmarks.getState().toggleBookmark(book, chapter);
+    notify(t(added ? 'bookmarked' : 'bookmarkRemoved'));
+  };
 
   const listenStatus = useListen((s) => s.status);
   const listenVerse = useListen((s) => s.verse);
@@ -236,6 +243,17 @@ export function Reader() {
           </button>
           <span className="spacer" />
           <button className="icon-btn" onClick={() => open('search')} aria-label={t('search')}><MagnifyingGlass size={24} weight="light" /></button>
+          <button
+            className="icon-btn"
+            onClick={onToggleBookmark}
+            aria-label={isBookmarked ? t('bookmarkRemove') : t('bookmarkAdd')}
+          >
+            <BookmarkSimple
+              size={24}
+              weight={isBookmarked ? 'fill' : 'light'}
+              style={isBookmarked ? { color: 'var(--accent)' } : undefined}
+            />
+          </button>
           {listenSupported() && (
             <button className="icon-btn" onClick={toggleListen} aria-label={listenStatus !== 'idle' ? t('listenStop') : t('listen')}>
               {listenStatus !== 'idle' ? <SpeakerSlash size={24} weight="light" /> : <SpeakerHigh size={24} weight="light" />}

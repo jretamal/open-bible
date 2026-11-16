@@ -340,6 +340,17 @@ const zhCN: Messages = {
   verseImageShare: '分享',
   verseImageCopy: '复制图片',
   verseImageCopied: '图片已复制到剪贴板',
+  bookmark: '书签',
+  bookmarkAdd: '书签本章',
+  bookmarkRemove: '移除书签',
+  bookmarked: '书签已保存',
+  bookmarkRemoved: '书签已移除',
+  studyBookmarks: '书签',
+  bookmarksEmpty: '暂无书签',
+  bookmarksEmptyHint: '点按顶栏或选择经文时的书签图标，以保存您的阅读进度。',
+  bookmarkEditLabel: '编辑标签',
+  bookmarkLabelPlaceholder: '例：每日阅读、背诵...',
+  bookmarkSave: '保存',
 };
 
 export default zhCN;
