@@ -110,6 +110,13 @@ export function VerseImageSheet() {
   const [fontFamily, setFontFamily] = useState<FontFamily>('serif');
   const [fontSize, setFontSize] = useState<FontSize>('md');
   const [copied, setCopied] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (document.fonts) {
+      document.fonts.ready.then(() => setFontsLoaded(true));
+    }
+  }, []);
 
   const verses = textData.status === 'ready' ? textData.verses : [];
   const selectedText = selection
@@ -160,14 +167,16 @@ export function VerseImageSheet() {
     // 2. Wrap Verse Text into lines
     const paddingX = 110;
     const maxTextWidth = width - paddingX * 2;
-    const fontName = fontFamily === 'serif' ? 'Literata' : 'Inter';
+    const fontStack = fontFamily === 'serif'
+      ? '"Literata Variable", "Literata", Georgia, "Times New Roman", serif'
+      : '"Inter Variable", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
 
     // Calculate optimal font size
     let currentFontSize = fontSize === 'sm' ? 44 : fontSize === 'lg' ? 62 : 52;
     if (format === 'story') currentFontSize = Math.round(currentFontSize * 1.08);
 
     const getLines = (size: number): string[] => {
-      ctx.font = `400 ${size}px "${fontName}", Georgia, serif`;
+      ctx.font = `400 ${size}px ${fontStack}`;
       const words = selectedText.split(' ');
       const lines: string[] = [];
       let currentLine = '';
@@ -206,14 +215,14 @@ export function VerseImageSheet() {
 
     // 4. Draw Ornamental Top Quote Symbol
     ctx.fillStyle = activeStyle.quoteColor;
-    ctx.font = `600 ${Math.min(76, currentFontSize * 1.4)}px "${fontName}", Georgia, serif`;
+    ctx.font = `600 ${Math.min(76, currentFontSize * 1.4)}px ${fontStack}`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'alphabetic';
     ctx.fillText('“', width / 2, startY - 24);
 
     // 5. Draw Verse Lines
     ctx.fillStyle = activeStyle.textColor;
-    ctx.font = `400 ${currentFontSize}px "${fontName}", Georgia, serif`;
+    ctx.font = `400 ${currentFontSize}px ${fontStack}`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
@@ -241,11 +250,11 @@ export function VerseImageSheet() {
 
     // 8. Draw Subtle Footer Watermark
     ctx.fillStyle = activeStyle.brandColor;
-    ctx.font = '500 22px "Inter", -apple-system, sans-serif';
+    ctx.font = '500 22px "Inter Variable", "Inter", -apple-system, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     ctx.fillText('biblia.jretamal.cl', width / 2, height - (format === 'story' ? 70 : 45));
-  }, [selectedText, citation, format, styleId, fontFamily, fontSize, activeStyle]);
+  }, [selectedText, citation, format, styleId, fontFamily, fontSize, activeStyle, fontsLoaded]);
 
   const getCanvasBlob = async (): Promise<Blob | null> => {
     const canvas = canvasRef.current;
@@ -370,6 +379,7 @@ export function VerseImageSheet() {
               <button
                 type="button"
                 className={`format-pill ${fontFamily === 'serif' ? 'active' : ''}`}
+                style={{ fontFamily: 'var(--font-serif)' }}
                 onClick={() => setFontFamily('serif')}
               >
                 {t('verseImageSerif')}
@@ -377,6 +387,7 @@ export function VerseImageSheet() {
               <button
                 type="button"
                 className={`format-pill ${fontFamily === 'sans' ? 'active' : ''}`}
+                style={{ fontFamily: 'var(--font-sans)' }}
                 onClick={() => setFontFamily('sans')}
               >
                 {t('verseImageSans')}
