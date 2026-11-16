@@ -73,8 +73,68 @@
 .vn-hidden .vn { display: none; }
 .note-mark { display: inline-block; vertical-align: -0.1em; margin-left: 4px; color: var(--accent); cursor: pointer; box-sizing: content-box; padding: 8px; margin: -8px -8px -8px -4px; }
 
-.chapter-foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 48px; font-family: var(--font-ui); user-select: none; }
-.chapter-foot .btn { flex: 1; width: auto; }
+.chapter-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+  font-family: var(--font-ui);
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chapter-foot .btn {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.chapter-foot .btn.block.lead {
+  padding-left: 34px;
+  padding-right: 12px;
+}
+
+.chapter-foot .btn.block.trail {
+  padding-right: 34px;
+  padding-left: 12px;
+}
+
+.chapter-foot .btn.block.lead > svg {
+  left: 12px;
+}
+
+.chapter-foot .btn.block.trail > svg {
+  right: 12px;
+}
+
+@media (max-width: 480px) {
+  .chapter-foot {
+    gap: 8px;
+  }
+  .chapter-foot .btn {
+    padding: 0 8px;
+    font-size: 13.5px;
+  }
+  .chapter-foot .btn.block.lead {
+    padding-left: 28px;
+    padding-right: 8px;
+  }
+  .chapter-foot .btn.block.trail {
+    padding-right: 28px;
+    padding-left: 8px;
+  }
+  .chapter-foot .btn.block.lead > svg {
+    left: 8px;
+  }
+  .chapter-foot .btn.block.trail > svg {
+    right: 8px;
+  }
+}
 
 
 /* Text panel */
