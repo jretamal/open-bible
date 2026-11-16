@@ -322,6 +322,8 @@ const en = {
   likedOpenToday: "Open today's devotional",
   likedAt: 'Liked {date}',
   studyType: 'Type of item',
+  concordance: 'Thematic concordance',
+  searchTopics: 'Search topics (e.g. refuge, grace)...',
 };
 
 export default en;

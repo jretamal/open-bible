@@ -324,6 +324,8 @@ const ja: Messages = {
   likedOpenToday: '今日のデボーションを開く',
   likedAt: '{date}にいいね',
   studyType: '項目の種類',
+  concordance: '主題別コンコルダンス',
+  searchTopics: 'トピックを検索...',
 };
 
 export default ja;

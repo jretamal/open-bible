@@ -324,6 +324,8 @@ const fr: Messages = {
   likedOpenToday: 'Ouvrir le dévotionnel du jour',
   likedAt: 'Aimé le {date}',
   studyType: 'Type d’élément',
+  concordance: 'Concordance thématique',
+  searchTopics: 'Rechercher un thème (ex. refuge, grâce)...',
 };
 
 export default fr;
