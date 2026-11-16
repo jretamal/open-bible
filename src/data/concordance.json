@@ -1,0 +1,521 @@
+{
+  "categories": [
+    {
+      "id": "proteccion",
+      "name": "Protección, Fortaleza y Amparo",
+      "terms": [
+        {
+          "term": "REFUGIO",
+          "entries": [
+            { "snippet": "Ciudades de refugio tendréis", "book": "nm", "chapter": 35, "verse": 11 },
+            { "snippet": "El eterno Dios es tu refugio", "book": "dt", "chapter": 33, "verse": 27 },
+            { "snippet": "Las ciudades de refugio", "book": "js", "chapter": 20, "verse": 2 },
+            { "snippet": "Mi alto refugio", "book": "2sm", "chapter": 22, "verse": 3 },
+            { "snippet": "Eres mi refugio; me guardarás", "book": "sl", "chapter": 32, "verse": 7 },
+            { "snippet": "Para refugio contra el turbión", "book": "is", "chapter": 4, "verse": 6 },
+            { "snippet": "Refugio mío en el día de la aflicción", "book": "jr", "chapter": 16, "verse": 19 },
+            { "snippet": "Dios es refugio para los oprimidos", "book": "sl", "chapter": 9, "verse": 9 },
+            { "snippet": "Dios es nuestro amparo y fortaleza", "book": "sl", "chapter": 46, "verse": 1 },
+            { "snippet": "Esperanza mía y castillo mío", "book": "sl", "chapter": 91, "verse": 2 }
+          ]
+        },
+        {
+          "term": "FORTALEZA",
+          "entries": [
+            { "snippet": "Jehová, fortaleza mía y libertador", "book": "sl", "chapter": 18, "verse": 2 },
+            { "snippet": "Jehová es la fortaleza de mi vida", "book": "sl", "chapter": 27, "verse": 1 },
+            { "snippet": "Jehová es mi fuerza y mi escudo", "book": "sl", "chapter": 28, "verse": 7 },
+            { "snippet": "Torre fuerte es el nombre de Jehová", "book": "pv", "chapter": 18, "verse": 10 },
+            { "snippet": "Fuiste fortaleza al pobre y menesteroso", "book": "is", "chapter": 25, "verse": 4 },
+            { "snippet": "Bueno es Jehová, fortaleza en el día de angustia", "book": "na", "chapter": 1, "verse": 7 },
+            { "snippet": "Jehová el Señor es mi fortaleza", "book": "hc", "chapter": 3, "verse": 19 }
+          ]
+        },
+        {
+          "term": "AMPARO",
+          "entries": [
+            { "snippet": "Dios es nuestro amparo y fortaleza", "book": "sl", "chapter": 46, "verse": 1 },
+            { "snippet": "Has sido mi refugio y torre fuerte", "book": "sl", "chapter": 61, "verse": 3 },
+            { "snippet": "El que habita al abrigo del Altísimo", "book": "sl", "chapter": 91, "verse": 1 },
+            { "snippet": "Mi escondedero y mi escudo eres tú", "book": "sl", "chapter": 119, "verse": 114 },
+            { "snippet": "Será aquel varón como escondedero", "book": "is", "chapter": 32, "verse": 2 }
+          ]
+        },
+        {
+          "term": "ESCUDO",
+          "entries": [
+            { "snippet": "No temas, Abram; yo soy tu escudo", "book": "gn", "chapter": 15, "verse": 1 },
+            { "snippet": "Escudo de tu socorro", "book": "dt", "chapter": 33, "verse": 29 },
+            { "snippet": "Escudo es a todos los que en él esperan", "book": "2sm", "chapter": 22, "verse": 31 },
+            { "snippet": "Tú, Jehová, eres escudo alrededor de mí", "book": "sl", "chapter": 3, "verse": 3 },
+            { "snippet": "Porque sol y escudo es Jehová Dios", "book": "sl", "chapter": 84, "verse": 11 },
+            { "snippet": "Él es escudo a los que en él esperan", "book": "pv", "chapter": 30, "verse": 5 },
+            { "snippet": "Tomad el escudo de la fe", "book": "ef", "chapter": 6, "verse": 16 }
+          ]
+        },
+        {
+          "term": "ROCA",
+          "entries": [
+            { "snippet": "Él es la Roca, cuya obra es perfecta", "book": "dt", "chapter": 32, "verse": 4 },
+            { "snippet": "No hay roca como nuestro Dios", "book": "1sm", "chapter": 2, "verse": 2 },
+            { "snippet": "Jehová, roca mía y castillo mío", "book": "sl", "chapter": 18, "verse": 2 },
+            { "snippet": "Él solamente es mi roca y mi salvación", "book": "sl", "chapter": 62, "verse": 2 },
+            { "snippet": "Sé para mí una roca de refugio", "book": "sl", "chapter": 71, "verse": 3 },
+            { "snippet": "Hombre prudente que edificó su casa sobre la roca", "book": "mt", "chapter": 7, "verse": 24 },
+            { "snippet": "Y la roca era Cristo", "book": "1co", "chapter": 10, "verse": 4 }
+          ]
+        },
+        {
+          "term": "SOCORRO",
+          "entries": [
+            { "snippet": "Te envíe ayuda desde el santuario", "book": "sl", "chapter": 20, "verse": 2 },
+            { "snippet": "Nuestra alma espera en Jehová; nuestra ayuda y escudo es él", "book": "sl", "chapter": 33, "verse": 20 },
+            { "snippet": "Mi socorro viene de Jehová, que hizo los cielos y la tierra", "book": "sl", "chapter": 121, "verse": 2 },
+            { "snippet": "Nuestro socorro está en el nombre de Jehová", "book": "sl", "chapter": 124, "verse": 8 },
+            { "snippet": "Para alcanzar misericordia y gracia para el oportuno socorro", "book": "hb", "chapter": 4, "verse": 16 },
+            { "snippet": "El Señor es mi ayudador; no temeré", "book": "hb", "chapter": 13, "verse": 6 }
+          ]
+        },
+        {
+          "term": "PAZ",
+          "entries": [
+            { "snippet": "Jehová alce sobre ti su rostro y ponga en ti paz", "book": "nm", "chapter": 6, "verse": 26 },
+            { "snippet": "Jehová bendecirá a su pueblo con paz", "book": "sl", "chapter": 29, "verse": 11 },
+            { "snippet": "Tú guardarás en completa paz a aquel cuyo pensamiento en ti persevera", "book": "is", "chapter": 26, "verse": 3 },
+            { "snippet": "Príncipe de Paz", "book": "is", "chapter": 9, "verse": 6 },
+            { "snippet": "La paz os dejo, mi paz os doy", "book": "jo", "chapter": 14, "verse": 27 },
+            { "snippet": "En el mundo tendréis aflicción; pero confiad, yo he vencido al mundo", "book": "jo", "chapter": 16, "verse": 33 },
+            { "snippet": "Justificados, pues, por la fe, tenemos paz para con Dios", "book": "rm", "chapter": 5, "verse": 1 },
+            { "snippet": "La paz de Dios, que sobrepasa todo entendimiento", "book": "fp", "chapter": 4, "verse": 7 }
+          ]
+        },
+        {
+          "term": "CONSUELO",
+          "entries": [
+            { "snippet": "Tu vara y tu cayado me infundirán aliento", "book": "sl", "chapter": 23, "verse": 4 },
+            { "snippet": "En la multitud de mis pensamientos, tus consolaciones alegraban mi alma", "book": "sl", "chapter": 94, "verse": 19 },
+            { "snippet": "Consolaos, consolaos, pueblo mío, dice vuestro Dios", "book": "is", "chapter": 40, "verse": 1 },
+            { "snippet": "Bienaventurados los que lloran, porque ellos recibirán consolación", "book": "mt", "chapter": 5, "verse": 4 },
+            { "snippet": "Dios de toda consolación, el cual nos consuela en todas nuestras tribulaciones", "book": "2co", "chapter": 1, "verse": 3 }
+          ]
+        },
+        {
+          "term": "ESPERANZA",
+          "entries": [
+            { "snippet": "Y ahora, Señor, ¿qué esperaré? Mi esperanza está en ti", "book": "sl", "chapter": 39, "verse": 7 },
+            { "snippet": "Porque tú, oh Señor Jehová, eres mi esperanza", "book": "sl", "chapter": 71, "verse": 5 },
+            { "snippet": "Pensamientos de paz, para daros el fin que esperáis", "book": "jr", "chapter": 29, "verse": 11 },
+            { "snippet": "Y la esperanza no avergüenza", "book": "rm", "chapter": 5, "verse": 5 },
+            { "snippet": "El Dios de esperanza os llene de todo gozo y paz en el creer", "book": "rm", "chapter": 15, "verse": 13 },
+            { "snippet": "La cual tenemos como segura y firme ancla del alma", "book": "hb", "chapter": 6, "verse": 19 },
+            { "snippet": "Nos hizo renacer para una esperanza viva", "book": "1pe", "chapter": 1, "verse": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salvacion",
+      "name": "Salvación, Cruz y Doctrinas",
+      "terms": [
+        {
+          "term": "GRACIA",
+          "entries": [
+            { "snippet": "Porque de su plenitud tomamos todos, y gracia sobre gracia", "book": "jo", "chapter": 1, "verse": 16 },
+            { "snippet": "Siendo justificados gratuitamente por su gracia", "book": "rm", "chapter": 3, "verse": 24 },
+            { "snippet": "Donde el pecado abundó, sobreabundó la gracia", "book": "rm", "chapter": 5, "verse": 20 },
+            { "snippet": "Bástate mi gracia; porque mi poder se perfecciona en la debilidad", "book": "2co", "chapter": 12, "verse": 9 },
+            { "snippet": "Porque por gracia sois salvos por medio de la fe", "book": "ef", "chapter": 2, "verse": 8 },
+            { "snippet": "Porque la gracia de Dios se ha manifestado para salvación a todos", "book": "tt", "chapter": 2, "verse": 11 }
+          ]
+        },
+        {
+          "term": "FE",
+          "entries": [
+            { "snippet": "Mas el justo por su fe vivirá", "book": "hc", "chapter": 2, "verse": 4 },
+            { "snippet": "Si tuviereis fe como un grano de mostaza", "book": "mt", "chapter": 17, "verse": 20 },
+            { "snippet": "Así que la fe es por el oír, y el oír, por la palabra de Dios", "book": "rm", "chapter": 10, "verse": 17 },
+            { "snippet": "Porque por fe andamos, no por vista", "book": "2co", "chapter": 5, "verse": 7 },
+            { "snippet": "Con Cristo estoy juntamente crucificado, y ya no vivo yo", "book": "gl", "chapter": 2, "verse": 20 },
+            { "snippet": "Es, pues, la fe la certeza de lo que se espera", "book": "hb", "chapter": 11, "verse": 1 },
+            { "snippet": "Pero sin fe es imposible agradar a Dios", "book": "hb", "chapter": 11, "verse": 6 }
+          ]
+        },
+        {
+          "term": "SALVACIÓN",
+          "entries": [
+            { "snippet": "Estad firmes, y ved la salvación que Jehová hará hoy", "book": "ex", "chapter": 14, "verse": 13 },
+            { "snippet": "Jehová es mi luz y mi salvación; ¿de quién temeré?", "book": "sl", "chapter": 27, "verse": 1 },
+            { "snippet": "He aquí Dios es salvación mía; me aseguraré y no temeré", "book": "is", "chapter": 12, "verse": 2 },
+            { "snippet": "En ningún otro hay salvación; no hay otro nombre bajo el cielo", "book": "atos", "chapter": 4, "verse": 12 },
+            { "snippet": "No me avergüenzo del evangelio, porque es poder de Dios para salvación", "book": "rm", "chapter": 1, "verse": 16 },
+            { "snippet": "He aquí ahora el tiempo aceptable; he aquí ahora el día de salvación", "book": "2co", "chapter": 6, "verse": 2 }
+          ]
+        },
+        {
+          "term": "REDENCIÓN",
+          "entries": [
+            { "snippet": "Yo sé que mi Redentor vive, y al fin se levantará", "book": "jó", "chapter": 19, "verse": 25 },
+            { "snippet": "Porque en Jehová hay misericordia, y abundante redención", "book": "sl", "chapter": 130, "verse": 7 },
+            { "snippet": "En quien tenemos redención por su sangre, el perdón de pecados", "book": "ef", "chapter": 1, "verse": 7 },
+            { "snippet": "Habiendo obtenido eterna redención", "book": "hb", "chapter": 9, "verse": 12 },
+            { "snippet": "Fuisteis rescatados con la sangre preciosa de Cristo", "book": "1pe", "chapter": 1, "verse": 18 }
+          ]
+        },
+        {
+          "term": "JUSTIFICACIÓN",
+          "entries": [
+            { "snippet": "Concluimos, pues, que el hombre es justificado por fe sin las obras", "book": "rm", "chapter": 3, "verse": 28 },
+            { "snippet": "Justificados, pues, por la fe, tenemos paz para con Dios", "book": "rm", "chapter": 5, "verse": 1 },
+            { "snippet": "Estando ya justificados en su sangre, por él seremos salvos de la ira", "book": "rm", "chapter": 5, "verse": 9 },
+            { "snippet": "El hombre no es justificado por las obras de la ley, sino por la fe de Jesucristo", "book": "gl", "chapter": 2, "verse": 16 }
+          ]
+        },
+        {
+          "term": "PERDÓN",
+          "entries": [
+            { "snippet": "Él es quien perdona todas tus iniquidades", "book": "sl", "chapter": 103, "verse": 3 },
+            { "snippet": "Pero en ti hay perdón, para que seas temido", "book": "sl", "chapter": 130, "verse": 4 },
+            { "snippet": "El cual será amplio en perdonar", "book": "is", "chapter": 55, "verse": 7 },
+            { "snippet": "Esto es mi sangre del nuevo pacto, que por muchos es derramada para remisión de los pecados", "book": "mt", "chapter": 26, "verse": 28 },
+            { "snippet": "Si confesamos nuestros pecados, él es fiel y justo para perdonar nuestros pecados", "book": "1jo", "chapter": 1, "verse": 9 }
+          ]
+        },
+        {
+          "term": "SANGRE",
+          "entries": [
+            { "snippet": "Y veré la sangre y pasaré de vosotros", "book": "ex", "chapter": 12, "verse": 13 },
+            { "snippet": "Porque la vida de la carne en la sangre está", "book": "lv", "chapter": 17, "verse": 11 },
+            { "snippet": "Habéis sido hechos cercanos por la sangre de Cristo", "book": "ef", "chapter": 2, "verse": 13 },
+            { "snippet": "Haciendo la paz mediante la sangre de su cruz", "book": "cl", "chapter": 1, "verse": 20 },
+            { "snippet": "Sin derramamiento de sangre no se hace remisión", "book": "hb", "chapter": 9, "verse": 22 },
+            { "snippet": "La sangre de Jesucristo su Hijo nos limpia de todo pecado", "book": "1jo", "chapter": 1, "verse": 7 }
+          ]
+        },
+        {
+          "term": "PACTO",
+          "entries": [
+            { "snippet": "He aquí que yo establezco mi pacto con vosotros", "book": "gn", "chapter": 9, "verse": 9 },
+            { "snippet": "He aquí la sangre del pacto que Jehová ha hecho con vosotros", "book": "ex", "chapter": 24, "verse": 8 },
+            { "snippet": "Haré nuevo pacto con la casa de Israel", "book": "jr", "chapter": 31, "verse": 31 },
+            { "snippet": "Esta copa es el nuevo pacto en mi sangre", "book": "1co", "chapter": 11, "verse": 25 },
+            { "snippet": "Mediador de un nuevo pacto", "book": "hb", "chapter": 9, "verse": 15 }
+          ]
+        },
+        {
+          "term": "CRUZ",
+          "entries": [
+            { "snippet": "El que no toma su cruz y sigue en pos de mí, no es digno de mí", "book": "mt", "chapter": 10, "verse": 38 },
+            { "snippet": "Porque la palabra de la cruz es locura a los que se pierden", "book": "1co", "chapter": 1, "verse": 18 },
+            { "snippet": "Lejos esté de mí gloriarme, sino en la cruz de nuestro Señor Jesucristo", "book": "gl", "chapter": 6, "verse": 14 },
+            { "snippet": "Se humilló a sí mismo, haciéndose obediente hasta la muerte, y muerte de cruz", "book": "fp", "chapter": 2, "verse": 8 },
+            { "snippet": "El cual por el gozo puesto delante de él sufrió la cruz", "book": "hb", "chapter": 12, "verse": 2 }
+          ]
+        },
+        {
+          "term": "RESURRECCIÓN",
+          "entries": [
+            { "snippet": "No está aquí, pues ha resucitado, como dijo", "book": "mt", "chapter": 28, "verse": 6 },
+            { "snippet": "Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá", "book": "jo", "chapter": 11, "verse": 25 },
+            { "snippet": "Y con gran poder los apóstoles daban testimonio de la resurrección", "book": "atos", "chapter": 4, "verse": 33 },
+            { "snippet": "Mas ahora Cristo ha resucitado de los muertos; primicias de los que durmieron", "book": "1co", "chapter": 15, "verse": 20 },
+            { "snippet": "¿Dónde está, oh muerte, tu aguijón? ¿Dónde, oh sepulcro, tu victoria?", "book": "1co", "chapter": 15, "verse": 55 }
+          ]
+        },
+        {
+          "term": "VIDA ETERNA",
+          "entries": [
+            { "snippet": "Para que todo aquel que en él cree, no se pierda, mas tenga vida eterna", "book": "jo", "chapter": 3, "verse": 16 },
+            { "snippet": "El que oye mi palabra, y cree al que me envió, tiene vida eterna", "book": "jo", "chapter": 5, "verse": 24 },
+            { "snippet": "Y esta es la vida eterna: que te conozcan a ti, el único Dios verdadero", "book": "jo", "chapter": 17, "verse": 3 },
+            { "snippet": "Porque la paga del pecado es muerte, mas la dádiva de Dios es vida eterna", "book": "rm", "chapter": 6, "verse": 23 },
+            { "snippet": "Dios nos ha dado vida eterna; y esta vida está en su Hijo", "book": "1jo", "chapter": 5, "verse": 11 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atributos",
+      "name": "El Carácter y Atributos de Dios",
+      "terms": [
+        {
+          "term": "MISERICORDIA",
+          "entries": [
+            { "snippet": "Jehová, fuerte, misericordioso y piadoso; tardo para la ira", "book": "ex", "chapter": 34, "verse": 6 },
+            { "snippet": "Porque para siempre es su misericordia", "book": "sl", "chapter": 100, "verse": 5 },
+            { "snippet": "Misericordioso y clemente es Jehová; lento para la ira, y grande en misericordia", "book": "sl", "chapter": 103, "verse": 8 },
+            { "snippet": "Por la misericordia de Jehová no hemos sido consumidos; nuevas son cada mañana", "book": "lm", "chapter": 3, "verse": 22 },
+            { "snippet": "Porque se deleita en la misericordia", "book": "mq", "chapter": 7, "verse": 18 },
+            { "snippet": "Pero Dios, que es rico en misericordia, por su gran amor", "book": "ef", "chapter": 2, "verse": 4 }
+          ]
+        },
+        {
+          "term": "SANTIDAD",
+          "entries": [
+            { "snippet": "¿Quién como tú, magnífico en santidad?", "book": "ex", "chapter": 15, "verse": 11 },
+            { "snippet": "Habéis de ser santos, porque yo soy santo", "book": "lv", "chapter": 11, "verse": 44 },
+            { "snippet": "Santo, santo, santo, Jehová de los ejércitos; toda la tierra está llena de su gloria", "book": "is", "chapter": 6, "verse": 3 },
+            { "snippet": "Como aquel que os llamó es santo, sed también vosotros santos", "book": "1pe", "chapter": 1, "verse": 15 },
+            { "snippet": "Santo, santo, santo es el Señor Dios Todopoderoso", "book": "ap", "chapter": 4, "verse": 8 }
+          ]
+        },
+        {
+          "term": "JUSTICIA",
+          "entries": [
+            { "snippet": "Dios de verdad, y ninguna iniquidad en él; es justo y recto", "book": "dt", "chapter": 32, "verse": 4 },
+            { "snippet": "Porque Jehová es justo, y ama la justicia", "book": "sl", "chapter": 11, "verse": 7 },
+            { "snippet": "Justicia y juicio son el cimiento de tu trono", "book": "sl", "chapter": 89, "verse": 14 },
+            { "snippet": "Justo es Jehová en todos sus caminos", "book": "sl", "chapter": 145, "verse": 17 },
+            { "snippet": "Con el fin de manifestar su justicia, a fin de que él sea el justo", "book": "rm", "chapter": 3, "verse": 26 }
+          ]
+        },
+        {
+          "term": "FIDELIDAD",
+          "entries": [
+            { "snippet": "Dios fiel, que guarda el pacto y la misericordia a los que le aman", "book": "dt", "chapter": 7, "verse": 9 },
+            { "snippet": "Hasta los cielos llega tu misericordia, y tu fidelidad hasta las nubes", "book": "sl", "chapter": 36, "verse": 5 },
+            { "snippet": "De generación en generación es tu fidelidad", "book": "sl", "chapter": 119, "verse": 90 },
+            { "snippet": "Grande es tu fidelidad", "book": "lm", "chapter": 3, "verse": 23 },
+            { "snippet": "Fiel es Dios, por el cual fuisteis llamados", "book": "1co", "chapter": 1, "verse": 9 },
+            { "snippet": "Si fuéremos infieles, él permanece fiel; él no puede negarse a sí mismo", "book": "2tm", "chapter": 2, "verse": 13 }
+          ]
+        },
+        {
+          "term": "AMOR",
+          "entries": [
+            { "snippet": "Con amor eterno te he amado; por tanto, te prolongué mi misericordia", "book": "jr", "chapter": 31, "verse": 3 },
+            { "snippet": "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito", "book": "jo", "chapter": 3, "verse": 16 },
+            { "snippet": "Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros", "book": "rm", "chapter": 5, "verse": 8 },
+            { "snippet": "Nada nos podrá separar del amor de Dios, que es en Cristo Jesús", "book": "rm", "chapter": 8, "verse": 39 },
+            { "snippet": "El que no ama, no ha conocido a Dios; porque Dios es amor", "book": "1jo", "chapter": 4, "verse": 8 },
+            { "snippet": "Nosotros le amamos a él, porque él nos amó primero", "book": "1jo", "chapter": 4, "verse": 19 }
+          ]
+        },
+        {
+          "term": "GLORIA",
+          "entries": [
+            { "snippet": "Los cielos cuentan la gloria de Dios, y el firmamento anuncia la obra de sus manos", "book": "sl", "chapter": 19, "verse": 1 },
+            { "snippet": "¿Quién es este Rey de gloria? Jehová de los ejércitos", "book": "sl", "chapter": 24, "verse": 10 },
+            { "snippet": "Toda la tierra está llena de su gloria", "book": "is", "chapter": 6, "verse": 3 },
+            { "snippet": "Y vimos su gloria, gloria como del unigénito del Padre", "book": "jo", "chapter": 1, "verse": 14 },
+            { "snippet": "A él sea la gloria por los siglos de los siglos. Amén", "book": "rm", "chapter": 11, "verse": 36 }
+          ]
+        },
+        {
+          "term": "LUZ",
+          "entries": [
+            { "snippet": "Jehová es mi luz y mi salvación", "book": "sl", "chapter": 27, "verse": 1 },
+            { "snippet": "Lámpara es a mis pies tu palabra, y lumbrera a mi camino", "book": "sl", "chapter": 119, "verse": 105 },
+            { "snippet": "En él estaba la vida, y la vida era la luz de los hombres", "book": "jo", "chapter": 1, "verse": 4 },
+            { "snippet": "Yo soy la luz del mundo; el que me sigue, no andará en tinieblas", "book": "jo", "chapter": 8, "verse": 12 },
+            { "snippet": "Dios es luz, y no hay ningunas tinieblas en él", "book": "1jo", "chapter": 1, "verse": 5 }
+          ]
+        },
+        {
+          "term": "VERDAD",
+          "entries": [
+            { "snippet": "Encamíname en tu verdad, y enséñame", "book": "sl", "chapter": 25, "verse": 5 },
+            { "snippet": "La suma de tu palabra es verdad", "book": "sl", "chapter": 119, "verse": 160 },
+            { "snippet": "Y conoceréis la verdad, y la verdad os hará libres", "book": "jo", "chapter": 8, "verse": 32 },
+            { "snippet": "Yo soy el camino, y la verdad, y la vida", "book": "jo", "chapter": 14, "verse": 6 },
+            { "snippet": "Santifícalos en tu verdad; tu palabra es verdad", "book": "jo", "chapter": 17, "verse": 17 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vida_cristiana",
+      "name": "Vida Cristiana y Virtudes",
+      "terms": [
+        {
+          "term": "ORACIÓN",
+          "entries": [
+            { "snippet": "Si se humillare mi pueblo... y oraren, y buscaren mi rostro", "book": "2cr", "chapter": 7, "verse": 14 },
+            { "snippet": "Oh Jehová, de mañana oirás mi voz; de mañana me presentaré delante de ti", "book": "sl", "chapter": 5, "verse": 3 },
+            { "snippet": "Mas tú, cuando ores, entra en tu aposento, y cerrada la puerta, ora a tu Padre", "book": "mt", "chapter": 6, "verse": 6 },
+            { "snippet": "Velad y orad, para que no entréis en tentación", "book": "mt", "chapter": 26, "verse": 41 },
+            { "snippet": "Sobre la necesidad de orar siempre, y no desmayar", "book": "lc", "chapter": 18, "verse": 1 },
+            { "snippet": "Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios", "book": "fp", "chapter": 4, "verse": 6 },
+            { "snippet": "Orad sin cesar", "book": "1ts", "chapter": 5, "verse": 17 },
+            { "snippet": "La oración eficaz del justo puede mucho", "book": "tg", "chapter": 5, "verse": 16 }
+          ]
+        },
+        {
+          "term": "AYUNO",
+          "entries": [
+            { "snippet": "Y publiqué ayuno allí para afligirnos delante de nuestro Dios", "book": "ed", "chapter": 8, "verse": 21 },
+            { "snippet": "Ayunad por mí, y no comáis ni bebáis en tres días", "book": "et", "chapter": 4, "verse": 16 },
+            { "snippet": "¿No es más bien el ayuno que yo escogí, desatar las ligaduras de impiedad?", "book": "is", "chapter": 58, "verse": 6 },
+            { "snippet": "Pero tú, cuando ayunes, unge tu cabeza y lava tu rostro", "book": "mt", "chapter": 6, "verse": 17 },
+            { "snippet": "Ministrando éstos al Señor, y ayunando, dijo el Espíritu Santo", "book": "atos", "chapter": 13, "verse": 2 }
+          ]
+        },
+        {
+          "term": "OBEDIENCIA",
+          "entries": [
+            { "snippet": "Ciertamente el obedecer es mejor que los sacrificios", "book": "1sm", "chapter": 15, "verse": 22 },
+            { "snippet": "Es menester obedecer a Dios antes que a los hombres", "book": "atos", "chapter": 5, "verse": 29 },
+            { "snippet": "Y por lo que padeció aprendió la obediencia", "book": "hb", "chapter": 5, "verse": 8 },
+            { "snippet": "Pues este es el amor a Dios, que guardemos sus mandamientos", "book": "1jo", "chapter": 5, "verse": 3 }
+          ]
+        },
+        {
+          "term": "SABIDURÍA",
+          "entries": [
+            { "snippet": "El temor del Señor es la sabiduría, y el apartarse del mal, la inteligencia", "book": "jó", "chapter": 28, "verse": 28 },
+            { "snippet": "El principio de la sabiduría es el temor de Jehová", "book": "pv", "chapter": 1, "verse": 7 },
+            { "snippet": "Bienaventurado el hombre que halla la sabiduría", "book": "pv", "chapter": 3, "verse": 13 },
+            { "snippet": "Sabiduría ante todo; adquiere sabiduría", "book": "pv", "chapter": 4, "verse": 7 },
+            { "snippet": "Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios", "book": "tg", "chapter": 1, "verse": 5 }
+          ]
+        },
+        {
+          "term": "HUMILDAD",
+          "entries": [
+            { "snippet": "Encaminará a los humildes por el juicio, y enseñará a los mansos su carrera", "book": "sl", "chapter": 25, "verse": 9 },
+            { "snippet": "Antes de la honra es el abatimiento", "book": "pv", "chapter": 15, "verse": 33 },
+            { "snippet": "Riquezas, honra y vida son la remuneración de la humildad", "book": "pv", "chapter": 22, "verse": 4 },
+            { "snippet": "Aprended de mí, que soy manso y humilde de corazón", "book": "mt", "chapter": 11, "verse": 29 },
+            { "snippet": "Dios resiste a los soberbios, y da gracia a los humildes", "book": "tg", "chapter": 4, "verse": 6 },
+            { "snippet": "Humillaos, pues, bajo la poderosa mano de Dios, para que él os exalte", "book": "1pe", "chapter": 5, "verse": 6 }
+          ]
+        },
+        {
+          "term": "GOZO",
+          "entries": [
+            { "snippet": "El gozo de Jehová es vuestra fuerza", "book": "ne", "chapter": 8, "verse": 10 },
+            { "snippet": "En tu presencia hay plenitud de gozo; delicias a tu diestra para siempre", "book": "sl", "chapter": 16, "verse": 11 },
+            { "snippet": "Estas cosas os he hablado, para que mi gozo esté en vosotros", "book": "jo", "chapter": 15, "verse": 11 },
+            { "snippet": "Porque el fruto del Espíritu es amor, gozo, paz", "book": "gl", "chapter": 5, "verse": 22 },
+            { "snippet": "Regocijaos en el Señor siempre. Otra vez digo: ¡Regocijaos!", "book": "fp", "chapter": 4, "verse": 4 }
+          ]
+        },
+        {
+          "term": "PACIENCIA",
+          "entries": [
+            { "snippet": "Guarda silencio ante Jehová, y espera en él", "book": "sl", "chapter": 37, "verse": 7 },
+            { "snippet": "Mejor es el sufrido de espíritu que el altivo de espíritu", "book": "ec", "chapter": 7, "verse": 8 },
+            { "snippet": "Gozosos en la esperanza; sufridos en la tribulación; constantes en la oración", "book": "rm", "chapter": 12, "verse": 12 },
+            { "snippet": "Vestíos, pues, como escogidos de Dios... de paciencia", "book": "cl", "chapter": 3, "verse": 12 },
+            { "snippet": "Tened también vosotros paciencia, y afirmad vuestros corazones", "book": "tg", "chapter": 5, "verse": 8 }
+          ]
+        },
+        {
+          "term": "TEMOR DE DIOS",
+          "entries": [
+            { "snippet": "¿Qué pide Jehová tu Dios de ti, sino que temas a Jehová tu Dios?", "book": "dt", "chapter": 10, "verse": 12 },
+            { "snippet": "El principio de la sabiduría es el temor de Jehová", "book": "sl", "chapter": 111, "verse": 10 },
+            { "snippet": "En el temor de Jehová está la fuerte confianza", "book": "pv", "chapter": 14, "verse": 26 },
+            { "snippet": "El fin de todo el discurso oído es este: Teme a Dios, y guarda sus mandamientos", "book": "ec", "chapter": 12, "verse": 13 }
+          ]
+        },
+        {
+          "term": "INTEGRIDAD",
+          "entries": [
+            { "snippet": "Hombre perfecto y recto, temeroso de Dios y apartado del mal", "book": "jó", "chapter": 1, "verse": 1 },
+            { "snippet": "Integridad y rectitud me guarden, porque en ti he esperado", "book": "sl", "chapter": 25, "verse": 21 },
+            { "snippet": "Júzgame, oh Jehová, porque yo en mi integridad he andado", "book": "sl", "chapter": 26, "verse": 1 },
+            { "snippet": "El que camina en integridad anda confiado", "book": "pv", "chapter": 10, "verse": 9 },
+            { "snippet": "La integridad de los rectos los encaminará", "book": "pv", "chapter": 11, "verse": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conceptos_clave",
+      "name": "Términos Clave y Conceptos Bíblicos",
+      "terms": [
+        {
+          "term": "MESÍAS",
+          "entries": [
+            { "snippet": "Se levantarán los reyes de la tierra contra Jehová y contra su ungido", "book": "sl", "chapter": 2, "verse": 2 },
+            { "snippet": "Porque un niño nos es nacido, hijo nos es dado", "book": "is", "chapter": 9, "verse": 6 },
+            { "snippet": "Mas él herido fue por nuestras rebeliones, molido por nuestros pecados", "book": "is", "chapter": 53, "verse": 5 },
+            { "snippet": "Hasta el Mesías Príncipe, habrá siete semanas", "book": "dn", "chapter": 9, "verse": 25 },
+            { "snippet": "Pero tú, Belén Efrata... de ti me saldrá el que será Señor en Israel", "book": "mq", "chapter": 5, "verse": 2 },
+            { "snippet": "Tú eres el Cristo, el Hijo del Dios viviente", "book": "mt", "chapter": 16, "verse": 16 },
+            { "snippet": "Hemos hallado al Mesías (que traducido es, el Cristo)", "book": "jo", "chapter": 1, "verse": 41 }
+          ]
+        },
+        {
+          "term": "ESPÍRITU SANTO",
+          "entries": [
+            { "snippet": "Y el Espíritu de Dios se movía sobre la faz de las aguas", "book": "gn", "chapter": 1, "verse": 2 },
+            { "snippet": "Y no quites de mí tu santo Espíritu", "book": "sl", "chapter": 51, "verse": 11 },
+            { "snippet": "El Espíritu de Jehová el Señor está sobre mí", "book": "is", "chapter": 61, "verse": 1 },
+            { "snippet": "Derramaré mi Espíritu sobre toda carne", "book": "jl", "chapter": 2, "verse": 28 },
+            { "snippet": "Y yo rogaré al Padre, y os dará otro Consolador", "book": "jo", "chapter": 14, "verse": 16 },
+            { "snippet": "Pero recibiréis poder, cuando haya venido sobre vosotros el Espíritu Santo", "book": "atos", "chapter": 1, "verse": 8 },
+            { "snippet": "Porque todos los que son guiados por el Espíritu de Dios, éstos son hijos de Dios", "book": "rm", "chapter": 8, "verse": 14 }
+          ]
+        },
+        {
+          "term": "TEMPLO",
+          "entries": [
+            { "snippet": "Una cosa he demandado a Jehová... para contemplar la hermosura de Jehová en su templo", "book": "sl", "chapter": 27, "verse": 4 },
+            { "snippet": "Mas Jehová está en su santo templo; calle delante de él toda la tierra", "book": "hc", "chapter": 2, "verse": 20 },
+            { "snippet": "¿No sabéis que sois templo de Dios, y que el Espíritu de Dios mora en vosotros?", "book": "1co", "chapter": 3, "verse": 16 },
+            { "snippet": "¿O ignoráis que vuestro cuerpo es templo del Espíritu Santo?", "book": "1co", "chapter": 6, "verse": 19 }
+          ]
+        },
+        {
+          "term": "SACRIFICIO",
+          "entries": [
+            { "snippet": "Los sacrificios de Dios son el espíritu quebrantado", "book": "sl", "chapter": 51, "verse": 17 },
+            { "snippet": "Que presentéis vuestros cuerpos en sacrificio vivo, santo, agradable a Dios", "book": "rm", "chapter": 12, "verse": 1 },
+            { "snippet": "Así también Cristo fue ofrecido una sola vez para llevar los pecados de muchos", "book": "hb", "chapter": 9, "verse": 28 },
+            { "snippet": "Ofrezcamos siempre a Dios, por medio de él, sacrificio de alabanza", "book": "hb", "chapter": 13, "verse": 15 }
+          ]
+        },
+        {
+          "term": "UNGIDO",
+          "entries": [
+            { "snippet": "Y tomó el cuerno del aceite, y lo ungió... y desde aquel día el Espíritu vino sobre David", "book": "1sm", "chapter": 16, "verse": 13 },
+            { "snippet": "Unges mi cabeza con aceite; mi copa está rebosando", "book": "sl", "chapter": 23, "verse": 5 },
+            { "snippet": "El Espíritu del Señor está sobre mí, por cuanto me ha ungido para dar buenas nuevas", "book": "lc", "chapter": 4, "verse": 18 },
+            { "snippet": "Cómo Dios ungió con el Espíritu Santo y con poder a Jesús de Nazaret", "book": "atos", "chapter": 10, "verse": 38 },
+            { "snippet": "Pero vosotros tenéis la unción del Santo, y conocéis todas las cosas", "book": "1jo", "chapter": 2, "verse": 20 }
+          ]
+        },
+        {
+          "term": "LEY",
+          "entries": [
+            { "snippet": "Sino que en la ley de Jehová está su delicia, y en su ley medita de día y de noche", "book": "sl", "chapter": 1, "verse": 2 },
+            { "snippet": "La ley de Jehová es perfecta, que convierte el alma", "book": "sl", "chapter": 19, "verse": 7 },
+            { "snippet": "¡Oh, cuánto amo yo tu ley! Todo el día es ella mi meditación", "book": "sl", "chapter": 119, "verse": 97 },
+            { "snippet": "No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir", "book": "mt", "chapter": 5, "verse": 17 },
+            { "snippet": "De manera que la ley ha sido nuestro ayo, para llevarnos a Cristo", "book": "gl", "chapter": 3, "verse": 24 }
+          ]
+        },
+        {
+          "term": "REINO DE DIOS",
+          "entries": [
+            { "snippet": "Tu reino es reino de todos los siglos, y tu señorío en todas las generaciones", "book": "sl", "chapter": 145, "verse": 13 },
+            { "snippet": "Mas buscad primeramente el reino de Dios y su justicia", "book": "mt", "chapter": 6, "verse": 33 },
+            { "snippet": "El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio", "book": "mc", "chapter": 1, "verse": 15 },
+            { "snippet": "El que no naciere de nuevo, no puede ver el reino de Dios", "book": "jo", "chapter": 3, "verse": 3 },
+            { "snippet": "Porque el reino de Dios no es comida ni bebida, sino justicia, paz y gozo en el Espíritu Santo", "book": "rm", "chapter": 14, "verse": 17 }
+          ]
+        },
+        {
+          "term": "APÓSTOL",
+          "entries": [
+            { "snippet": "Y cuando fue de día, llamó a sus discípulos, y escogió a doce de ellos, a los cuales también llamó apóstoles", "book": "lc", "chapter": 6, "verse": 13 },
+            { "snippet": "Y perseveraban en la doctrina de los apóstoles, en la comunión unos con otros", "book": "atos", "chapter": 2, "verse": 42 },
+            { "snippet": "Pablo, siervo de Jesucristo, llamado a ser apóstol, apartado para el evangelio de Dios", "book": "rm", "chapter": 1, "verse": 1 },
+            { "snippet": "Considerad al apóstol y sumo sacerdote de nuestra profesión, Cristo Jesús", "book": "hb", "chapter": 3, "verse": 1 }
+          ]
+        },
+        {
+          "term": "PROFETA",
+          "entries": [
+            { "snippet": "Profeta de en medio de ti, de tus hermanos, como yo, te levantará Jehová tu Dios; a él oiréis", "book": "dt", "chapter": 18, "verse": 15 },
+            { "snippet": "Creed en Jehová vuestro Dios, y estaréis seguros; creed a sus profetas, y seréis prosperados", "book": "2cr", "chapter": 20, "verse": 20 },
+            { "snippet": "Antes que te formase en el vientre te conocí, y te di por profeta a las naciones", "book": "jr", "chapter": 1, "verse": 5 },
+            { "snippet": "Porque no hará nada Jehová el Señor, sin que revele su secreto a sus siervos los profetas", "book": "am", "chapter": 3, "verse": 7 },
+            { "snippet": "Porque nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo", "book": "2pe", "chapter": 1, "verse": 21 }
+          ]
+        }
+      ]
+    }
+  ]
+}

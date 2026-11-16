@@ -28,7 +28,7 @@ if (Object.keys(votd.moveable).join() !== MOVEABLE.join()) fail(`votd: moveable 
 for (const [k, r] of Object.entries(votd.moveable)) checkRef(k, r);
 
 // Packs
-const ENDING = { 'pt-BR': 'em nome de Jesus, Amém!', en: "in Jesus' name, Amen!" };
+const ENDING = { 'pt-BR': 'em nome de Jesus, Amém!', en: "in Jesus' name, Amen!", es: 'en el nombre de Jesús, ¡amén!' };
 const files = readdirSync(new URL('../public/devotional/', import.meta.url)).filter((f) => f.endsWith('.json'));
 const rows = [];
 for (const f of files) {

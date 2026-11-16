@@ -324,6 +324,8 @@ const zhCN: Messages = {
   likedOpenToday: '打开今天的灵修',
   likedAt: '{date}点赞',
   studyType: '条目类型',
+  concordance: '主题汇编',
+  searchTopics: '搜索主题...',
 };
 
 export default zhCN;

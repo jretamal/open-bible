@@ -324,6 +324,8 @@ const ptBR: Messages = {
   likedOpenToday: 'Abrir o devocional de hoje',
   likedAt: 'Curtido em {date}',
   studyType: 'Tipo de item',
+  concordance: 'Concordância temática',
+  searchTopics: 'Buscar tema (ex. refúgio, graça)...',
 };
 
 export default ptBR;

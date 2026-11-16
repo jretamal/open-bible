@@ -324,6 +324,8 @@ const es: Messages = {
   likedOpenToday: 'Abrir el devocional de hoy',
   likedAt: 'Guardado el {date}',
   studyType: 'Tipo de elemento',
+  concordance: 'Concordancia temática',
+  searchTopics: 'Buscar tema (ej. refugio, gracia)...',
 };
 
 export default es;

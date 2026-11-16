@@ -28,6 +28,7 @@ import { SearchSheet } from './components/SearchSheet';
 import { LibrarySheet } from './components/LibrarySheet';
 import { StudySheet } from './components/StudySheet';
 import { DevotionalSheet } from './components/DevotionalSheet';
+import { ConcordanceSheet } from './components/ConcordanceSheet';
 import { markShownToday, shownToday, useDevotional } from './state/devotional';
 import { DeleteAccountSheet } from './components/DeleteAccountSheet';
 import { Toast } from './components/Toast';
@@ -116,6 +117,7 @@ export default function App() {
       {sheet === 'library' && <LibrarySheet />}
       {sheet === 'study' && <StudySheet />}
       {sheet === 'devotional' && <DevotionalSheet />}
+      {sheet === 'concordance' && <ConcordanceSheet />}
       {sheet === 'install' && <InstallSheet />}
       {sheet === 'feedback' && <FeedbackSheet />}
       {sheet === 'listen' && <ListenSheet />}

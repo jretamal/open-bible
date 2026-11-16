@@ -29,7 +29,12 @@ const SUGGESTED: Record<string, string> = {
 };
 export const suggestedVersion = (uiLang: string) => SUGGESTED[uiLang] ?? 'en_web';
 
-export const versionUrls = (id: string) => [
-  `https://cdn.jsdelivr.net/gh/thiagobodruk/bible@${CATALOG_SHA}/json/${id}.json`,
-  `https://raw.githubusercontent.com/thiagobodruk/bible/${CATALOG_SHA}/json/${id}.json`,
-];
+export const versionUrls = (id: string) => {
+  if (id === 'es_ntv' || id === 'es_nvi') {
+    return [`${import.meta.env.BASE_URL}bibles/${id}.json`];
+  }
+  return [
+    `https://cdn.jsdelivr.net/gh/thiagobodruk/bible@${CATALOG_SHA}/json/${id}.json`,
+    `https://raw.githubusercontent.com/thiagobodruk/bible/${CATALOG_SHA}/json/${id}.json`,
+  ];
+};

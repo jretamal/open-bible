@@ -361,6 +361,20 @@
    "books": 66
   },
   {
+   "id": "es_ntv",
+   "lang": "es",
+   "name": "Nueva Traducción Viviente",
+   "sizeMb": 4.2,
+   "books": 66
+  },
+  {
+   "id": "es_nvi",
+   "lang": "es",
+   "name": "Nueva Versión Internacional",
+   "sizeMb": 3.9,
+   "books": 66
+  },
+  {
    "id": "es_rvr1960",
    "lang": "es",
    "name": "Reina Valera 1960",

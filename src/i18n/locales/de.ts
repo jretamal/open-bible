@@ -324,6 +324,8 @@ const de: Messages = {
   likedOpenToday: 'Heutige Andacht öffnen',
   likedAt: 'Markiert am {date}',
   studyType: 'Art des Eintrags',
+  concordance: 'Thematische Konkordanz',
+  searchTopics: 'Themen suchen (z. B. Zuflucht, Gnade)...',
 };
 
 export default de;
