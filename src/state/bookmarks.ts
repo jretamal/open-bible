@@ -31,9 +31,12 @@ export const useBookmarks = create<BookmarksState>((set, get) => ({
   addBookmark: (book, chapter, verse, label) => {
     const id = makeBookmarkId(book, chapter, verse);
     const now = Date.now();
+    const item: Bookmark = { id, book, chapter, createdAt: now, updatedAt: now };
+    if (verse !== undefined) item.verse = verse;
+    if (label !== undefined && label.trim()) item.label = label.trim();
     set((s) => {
       const existing = s.bookmarks.filter((b) => b.id !== id);
-      const updated = [{ id, book, chapter, verse, label, createdAt: now, updatedAt: now }, ...existing];
+      const updated = [item, ...existing];
       setJson(STORAGE_KEY, updated);
       return { bookmarks: updated };
     });
@@ -67,7 +70,13 @@ export const useBookmarks = create<BookmarksState>((set, get) => ({
   updateLabel: (id, label) => {
     const now = Date.now();
     set((s) => {
-      const updated = s.bookmarks.map((b) => (b.id === id ? { ...b, label: label.trim() || undefined, updatedAt: now } : b));
+      const updated = s.bookmarks.map((b) => {
+        if (b.id !== id) return b;
+        const item: Bookmark = { ...b, updatedAt: now };
+        if (label.trim()) item.label = label.trim();
+        else delete item.label;
+        return item;
+      });
       setJson(STORAGE_KEY, updated);
       return { bookmarks: updated };
     });

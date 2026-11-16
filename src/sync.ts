@@ -101,6 +101,7 @@ export async function startSync(uid: string) {
     me.pulled = true;
     await flush(me);
   } catch (e) {
+    console.error('[Sync] startSync error:', e);
     if (stopped) return;
     onStatus(navigator.onLine ? 'error' : 'offline');
     // Without a network or on error, what is pending stays marked and goes up when the connection returns.
@@ -258,6 +259,14 @@ function applyPrefs(raw: Record<string, unknown> | null, initial: boolean) {
   }
 }
 
+const cleanDoc = (obj: Record<string, unknown>) => {
+  const clean: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(obj)) {
+    if (v !== undefined) clean[k] = v;
+  }
+  return clean;
+};
+
 /** Sends everything that is pending. Items that no longer exist become deletion markers. */
 async function flush(s: Session) {
   if (session !== s || !navigator.onLine) return;
@@ -283,7 +292,7 @@ async function flush(s: Session) {
         const id = rest.join('/');
         const ref = s.fs.doc(s.db, 'users', s.uid, name, id);
         const item = items[name as Col].get(id);
-        if (item) batch.set(ref, { ...item, updatedAt: stamp(item), deleted: false });
+        if (item) batch.set(ref, cleanDoc({ ...item, updatedAt: stamp(item), deleted: false }));
         else batch.set(ref, { deleted: true, updatedAt: now });
         part.set(k, item);
       }
@@ -295,7 +304,8 @@ async function flush(s: Session) {
       pendingPrefs = false;
     }
     onStatus('synced');
-  } catch {
+  } catch (err) {
+    console.error('[Sync] Flush error:', err);
     onStatus(navigator.onLine ? 'error' : 'offline');
   } finally {
     // Only what did not change during the upload leaves the queue.
