@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import pkg from './package.json' with { type: 'json' };
 
-// The app is served at https://<user>.github.io/open-bible/
-const base = '/open-bible/';
+// Root path for custom domains and Cloudflare Pages. Can be overridden via BASE_PATH if needed.
+const base = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.BASE_PATH ?? '/';
 
 const build = (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.GITHUB_SHA?.slice(0, 7) ?? 'dev';
 
@@ -71,8 +71,8 @@ export default defineConfig({
         navigateFallback: `${base}index.html`,
         // Cross-references are downloaded per book on first use, and then work offline.
         runtimeCaching: [
-          // This function is copied into the service worker, where `base` does not exist, so the path is spelled out.
-          { urlPattern: ({ url }) => url.pathname.startsWith('/open-bible/xrefs/'), handler: 'StaleWhileRevalidate', options: { cacheName: 'xrefs' } },
+          // Cross-references are downloaded per book on first use, and then work offline.
+          { urlPattern: ({ url }) => url.pathname.includes('/xrefs/'), handler: 'StaleWhileRevalidate', options: { cacheName: 'xrefs' } },
         ],
       },
     }),
