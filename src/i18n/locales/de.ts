@@ -349,8 +349,10 @@ const de: Messages = {
   bookmarksEmpty: 'Noch keine Lesezeichen',
   bookmarksEmptyHint: 'Tippe auf das Lesezeichen-Symbol in der oberen Leiste oder bei der Versauswahl, um deine Lesestelle zu speichern.',
   bookmarkEditLabel: 'Bezeichnung bearbeiten',
+  bookmarkAddLabel: '+ Bezeichnung hinzufügen',
   bookmarkLabelPlaceholder: 'z. B. Tägliche Lesung, Auswendiglernen...',
   bookmarkSave: 'Speichern',
+  bookmarkCancel: 'Abbrechen',
 };
 
 export default de;

@@ -349,8 +349,10 @@ const ptBR: Messages = {
   bookmarksEmpty: 'Nenhum marcador ainda',
   bookmarksEmptyHint: 'Toque no ícone de marcador na barra superior ou ao selecionar um versículo para lembrar de onde parou.',
   bookmarkEditLabel: 'Editar etiqueta',
+  bookmarkAddLabel: '+ Adicionar etiqueta',
   bookmarkLabelPlaceholder: 'ex. Leitura diária, Memorizar...',
   bookmarkSave: 'Salvar',
+  bookmarkCancel: 'Cancelar',
 };
 
 export default ptBR;

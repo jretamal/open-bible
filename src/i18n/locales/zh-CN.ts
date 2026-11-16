@@ -349,8 +349,10 @@ const zhCN: Messages = {
   bookmarksEmpty: '暂无书签',
   bookmarksEmptyHint: '点按顶栏或选择经文时的书签图标，以保存您的阅读进度。',
   bookmarkEditLabel: '编辑标签',
+  bookmarkAddLabel: '+ 添加标签',
   bookmarkLabelPlaceholder: '例：每日阅读、背诵...',
   bookmarkSave: '保存',
+  bookmarkCancel: '取消',
 };
 
 export default zhCN;

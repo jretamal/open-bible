@@ -347,8 +347,10 @@ const en = {
   bookmarksEmpty: 'No bookmarks yet',
   bookmarksEmptyHint: 'Tap the bookmark icon in the top bar or when selecting a verse to save your reading spot.',
   bookmarkEditLabel: 'Edit label',
+  bookmarkAddLabel: '+ Add label',
   bookmarkLabelPlaceholder: 'e.g. Daily reading, Memorize...',
   bookmarkSave: 'Save',
+  bookmarkCancel: 'Cancel',
 };
 
 export default en;

@@ -349,8 +349,10 @@ const ja: Messages = {
   bookmarksEmpty: 'しおりはまだありません',
   bookmarksEmptyHint: '上部バーまたは節を選択した時のしおりアイコンをタップして、読書の場所を保存できます。',
   bookmarkEditLabel: 'ラベルを編集',
+  bookmarkAddLabel: '+ ラベルを追加',
   bookmarkLabelPlaceholder: '例：毎日の読書、暗記...',
   bookmarkSave: '保存',
+  bookmarkCancel: 'キャンセル',
 };
 
 export default ja;

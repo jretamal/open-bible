@@ -349,8 +349,10 @@ const fr: Messages = {
   bookmarksEmpty: 'Aucun marque-page pour l’instant',
   bookmarksEmptyHint: 'Touchez l’icône de marque-page dans la barre supérieure ou en sélectionnant un verset pour enregistrer votre lecture.',
   bookmarkEditLabel: 'Modifier le libellé',
+  bookmarkAddLabel: '+ Ajouter un libellé',
   bookmarkLabelPlaceholder: 'ex. Lecture quotidienne, Mémoriser...',
   bookmarkSave: 'Enregistrer',
+  bookmarkCancel: 'Annuler',
 };
 
 export default fr;

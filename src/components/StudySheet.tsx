@@ -230,77 +230,95 @@ export function StudySheet() {
           )}
 
           {bookmarkEntries.map((b) => (
-            <div key={b.id} className="entry-row">
-              <button
-                className="entry"
-                onClick={() => {
-                  goTo(b.book, b.chapter, b.verse);
-                  close();
-                }}
-              >
-                <div className="ref">
-                  <BookmarkSimple size={16} weight="fill" style={{ color: 'var(--accent)', flexShrink: 0 }} />
-                  {refLabel(bookName(b.book), b.chapter, b.verse, b.verse)}
-                  <span className="date">{fmtDay.format(b.createdAt)}</span>
+            <div key={b.id} className="bookmark-card">
+              <div className="bookmark-head">
+                <button
+                  type="button"
+                  className="bookmark-ref-btn"
+                  onClick={() => {
+                    goTo(b.book, b.chapter, b.verse);
+                    close();
+                  }}
+                >
+                  <BookmarkSimple size={18} weight="fill" style={{ color: 'var(--accent)' }} />
+                  <span>{refLabel(bookName(b.book), b.chapter, b.verse, b.verse)}</span>
+                  <span className="bookmark-date">{fmtDay.format(b.createdAt)}</span>
+                </button>
+                <div className="bookmark-actions">
+                  <IconButton
+                    icon={PencilSimple}
+                    label={t('bookmarkEditLabel')}
+                    onClick={() => {
+                      if (editingBookmarkId === b.id) {
+                        setEditingBookmarkId(null);
+                      } else {
+                        setEditingBookmarkId(b.id);
+                        setBookmarkLabelInput(b.label || '');
+                      }
+                    }}
+                  />
+                  <IconButton
+                    icon={Trash}
+                    tone="danger"
+                    label={t('bookmarkRemove')}
+                    onClick={() => removeBookmark(b.id)}
+                  />
                 </div>
-                {editingBookmarkId === b.id ? (
-                  <div
-                    className="bookmark-edit-wrap"
-                    onClick={(e) => e.stopPropagation()}
-                    style={{ display: 'flex', gap: '8px', marginTop: '8px' }}
-                  >
-                    <input
-                      type="text"
-                      className="field-input"
-                      style={{ flex: 1, padding: '4px 8px', borderRadius: '8px', border: '1px solid var(--line)', background: 'var(--surface)', color: 'var(--fg)', fontSize: '14px' }}
-                      value={bookmarkLabelInput}
-                      placeholder={t('bookmarkLabelPlaceholder')}
-                      autoFocus
-                      onChange={(e) => setBookmarkLabelInput(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                          updateLabel(b.id, bookmarkLabelInput);
-                          setEditingBookmarkId(null);
-                        } else if (e.key === 'Escape') {
-                          setEditingBookmarkId(null);
-                        }
-                      }}
-                    />
-                    <Button
-                      size="sm"
-                      variant="primary"
-                      onClick={() => {
+              </div>
+
+              {editingBookmarkId === b.id ? (
+                <div className="bookmark-edit-row">
+                  <input
+                    type="text"
+                    className="bookmark-edit-input"
+                    value={bookmarkLabelInput}
+                    placeholder={t('bookmarkLabelPlaceholder')}
+                    autoFocus
+                    onChange={(e) => setBookmarkLabelInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
                         updateLabel(b.id, bookmarkLabelInput);
                         setEditingBookmarkId(null);
-                      }}
-                    >
-                      {t('bookmarkSave')}
-                    </Button>
-                  </div>
-                ) : (
-                  b.label && <p className="nt" style={{ fontStyle: 'italic', color: 'var(--muted)', marginTop: '4px' }}>🏷️ {b.label}</p>
-                )}
-              </button>
-              <IconButton
-                className="entry-edit"
-                icon={PencilSimple}
-                label={t('bookmarkEditLabel')}
-                onClick={() => {
-                  if (editingBookmarkId === b.id) {
-                    setEditingBookmarkId(null);
-                  } else {
-                    setEditingBookmarkId(b.id);
-                    setBookmarkLabelInput(b.label || '');
-                  }
-                }}
-              />
-              <IconButton
-                className="entry-edit"
-                icon={Trash}
-                tone="danger"
-                label={t('bookmarkRemove')}
-                onClick={() => removeBookmark(b.id)}
-              />
+                      } else if (e.key === 'Escape') {
+                        setEditingBookmarkId(null);
+                      }
+                    }}
+                  />
+                  <Button
+                    size="sm"
+                    variant="primary"
+                    onClick={() => {
+                      updateLabel(b.id, bookmarkLabelInput);
+                      setEditingBookmarkId(null);
+                    }}
+                  >
+                    {t('bookmarkSave')}
+                  </Button>
+                  <Button
+                    size="sm"
+                    onClick={() => setEditingBookmarkId(null)}
+                  >
+                    {t('bookmarkCancel')}
+                  </Button>
+                </div>
+              ) : b.label ? (
+                <div className="bookmark-label-badge">
+                  <span>🏷️ {b.label}</span>
+                </div>
+              ) : (
+                <div>
+                  <button
+                    type="button"
+                    className="bookmark-add-label-btn"
+                    onClick={() => {
+                      setEditingBookmarkId(b.id);
+                      setBookmarkLabelInput('');
+                    }}
+                  >
+                    {t('bookmarkAddLabel')}
+                  </button>
+                </div>
+              )}
             </div>
           ))}
         </>

@@ -349,8 +349,10 @@ const es: Messages = {
   bookmarksEmpty: 'No tienes marcadores aún',
   bookmarksEmptyHint: 'Toca el icono de marcador en la barra superior o al seleccionar un versículo para recordar dónde vas.',
   bookmarkEditLabel: 'Editar etiqueta',
+  bookmarkAddLabel: '+ Añadir etiqueta',
   bookmarkLabelPlaceholder: 'ej. Lectura diaria, Memorizar...',
   bookmarkSave: 'Guardar',
+  bookmarkCancel: 'Cancelar',
 };
 
 export default es;
