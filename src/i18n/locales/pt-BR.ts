@@ -326,6 +326,20 @@ const ptBR: Messages = {
   studyType: 'Tipo de item',
   concordance: 'Concordância temática',
   searchTopics: 'Buscar tema (ex. refúgio, graça)...',
+  verseImage: 'Criar imagem',
+  verseImageTitle: 'Compartilhar como imagem',
+  verseImageFormat: 'Formato',
+  verseImageSquare: 'Quadrado 1:1',
+  verseImageStory: 'Story 9:16',
+  verseImageStyle: 'Estilo',
+  verseImageFont: 'Fonte',
+  verseImageSerif: 'Clássica',
+  verseImageSans: 'Moderna',
+  verseImageSize: 'Tamanho',
+  verseImageDownload: 'Baixar imagem',
+  verseImageShare: 'Compartilhar',
+  verseImageCopy: 'Copiar imagem',
+  verseImageCopied: 'Imagem copiada para a área de transferência',
 };
 
 export default ptBR;

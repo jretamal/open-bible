@@ -326,6 +326,20 @@ const zhCN: Messages = {
   studyType: '条目类型',
   concordance: '主题汇编',
   searchTopics: '搜索主题...',
+  verseImage: '创建图片',
+  verseImageTitle: '作为图片分享',
+  verseImageFormat: '格式',
+  verseImageSquare: '正方形 1:1',
+  verseImageStory: '快拍 9:16',
+  verseImageStyle: '风格',
+  verseImageFont: '字体',
+  verseImageSerif: '经典',
+  verseImageSans: '现代',
+  verseImageSize: '字号',
+  verseImageDownload: '下载图片',
+  verseImageShare: '分享',
+  verseImageCopy: '复制图片',
+  verseImageCopied: '图片已复制到剪贴板',
 };
 
 export default zhCN;

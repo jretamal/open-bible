@@ -326,6 +326,20 @@ const ja: Messages = {
   studyType: '項目の種類',
   concordance: '主題別コンコルダンス',
   searchTopics: 'トピックを検索...',
+  verseImage: '画像を作成',
+  verseImageTitle: '画像として共有',
+  verseImageFormat: 'フォーマット',
+  verseImageSquare: '正方形 1:1',
+  verseImageStory: 'ストーリー 9:16',
+  verseImageStyle: 'スタイル',
+  verseImageFont: 'フォント',
+  verseImageSerif: 'クラシック',
+  verseImageSans: 'モダン',
+  verseImageSize: 'サイズ',
+  verseImageDownload: '画像をダウンロード',
+  verseImageShare: '共有',
+  verseImageCopy: '画像をコピー',
+  verseImageCopied: '画像をクリップボードにコピーしました',
 };
 
 export default ja;

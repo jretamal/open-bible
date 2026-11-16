@@ -326,6 +326,20 @@ const de: Messages = {
   studyType: 'Art des Eintrags',
   concordance: 'Thematische Konkordanz',
   searchTopics: 'Themen suchen (z. B. Zuflucht, Gnade)...',
+  verseImage: 'Bild erstellen',
+  verseImageTitle: 'Als Bild teilen',
+  verseImageFormat: 'Format',
+  verseImageSquare: 'Quadratisch 1:1',
+  verseImageStory: 'Story 9:16',
+  verseImageStyle: 'Stil',
+  verseImageFont: 'Schriftart',
+  verseImageSerif: 'Klassisch',
+  verseImageSans: 'Modern',
+  verseImageSize: 'Größe',
+  verseImageDownload: 'Bild herunterladen',
+  verseImageShare: 'Teilen',
+  verseImageCopy: 'Bild kopieren',
+  verseImageCopied: 'Bild in die Zwischenablage kopiert',
 };
 
 export default de;

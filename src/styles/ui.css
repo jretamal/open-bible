@@ -73,6 +73,9 @@
 .sheet-actions { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
 .sheet-actions > * { grid-column: span 2; }
 .sheet-actions.five > :nth-child(n + 4) { grid-column: span 3; }
+.sheet-actions.seven { grid-template-columns: repeat(12, 1fr); }
+.sheet-actions.seven > :nth-child(-n + 4) { grid-column: span 3; }
+.sheet-actions.seven > :nth-child(n + 5) { grid-column: span 4; }
 .sheet-action { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 68px; padding: 8px 6px; border-radius: var(--radius); background: var(--surface); font-size: 13px; font-weight: 500; }
 @media (hover: hover) { .sheet-action:hover { background: var(--surface-2); } }
 .sheet-action:active { background: var(--surface-2); }

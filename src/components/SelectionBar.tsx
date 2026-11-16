@@ -1,4 +1,4 @@
-import { BookOpenText, Copy, LinkSimple, Note, ShareNetwork, Sparkle, TextColumns } from '@phosphor-icons/react';
+import { BookOpenText, Copy, ImageSquare, LinkSimple, Note, ShareNetwork, Sparkle, TextColumns } from '@phosphor-icons/react';
 import { Sheet } from './Sheet';
 import { vkey, useStudy, type HlColor } from '../state/study';
 import { useUI } from '../state/ui';
@@ -64,10 +64,11 @@ export function SelectionBar() {
           // Picking a color finishes the action: the sheet closes and the highlight shows.
           clearSelection();
         }} />
-      <div className={`sheet-actions${aiEnabled ? '' : ' five'}`}>
+      <div className={`sheet-actions${aiEnabled ? ' seven' : ''}`}>
         <SheetAction icon={Note} onClick={() => open('note')}>{t('note')}</SheetAction>
         {aiEnabled && <SheetAction icon={Sparkle} onClick={() => useAsk.getState().openBar()}>{t('askAction')}</SheetAction>}
         <SheetAction icon={TextColumns} onClick={() => open('compare')}>{t('compare')}</SheetAction>
+        <SheetAction icon={ImageSquare} onClick={() => open('verseImage')}>{t('verseImage')}</SheetAction>
         <SheetAction icon={LinkSimple} onClick={() => open('xrefs')}>{t('xrefs')}</SheetAction>
         <SheetAction icon={Copy} onClick={copy}>{t('copy')}</SheetAction>
         <SheetAction icon={ShareNetwork} onClick={share}>{t('share')}</SheetAction>

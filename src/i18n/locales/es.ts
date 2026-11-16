@@ -326,6 +326,20 @@ const es: Messages = {
   studyType: 'Tipo de elemento',
   concordance: 'Concordancia temática',
   searchTopics: 'Buscar tema (ej. refugio, gracia)...',
+  verseImage: 'Crear imagen',
+  verseImageTitle: 'Compartir como imagen',
+  verseImageFormat: 'Formato',
+  verseImageSquare: 'Cuadrado 1:1',
+  verseImageStory: 'Historia 9:16',
+  verseImageStyle: 'Estilo',
+  verseImageFont: 'Tipografía',
+  verseImageSerif: 'Clásica',
+  verseImageSans: 'Moderna',
+  verseImageSize: 'Tamaño',
+  verseImageDownload: 'Descargar imagen',
+  verseImageShare: 'Compartir',
+  verseImageCopy: 'Copiar imagen',
+  verseImageCopied: 'Imagen copiada al portapapeles',
 };
 
 export default es;

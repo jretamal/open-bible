@@ -7,6 +7,7 @@ import './styles/base.css';
 import './styles/ui.css';
 import './styles/reader.css';
 import './styles/screens.css';
+import './styles/verse-image.css';
 import App from './App';
 import { initSettingsEffects } from './state/settings';
 import { boot } from './boot';

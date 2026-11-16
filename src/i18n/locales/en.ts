@@ -324,6 +324,20 @@ const en = {
   studyType: 'Type of item',
   concordance: 'Thematic concordance',
   searchTopics: 'Search topics (e.g. refuge, grace)...',
+  verseImage: 'Create image',
+  verseImageTitle: 'Share as image',
+  verseImageFormat: 'Format',
+  verseImageSquare: 'Square 1:1',
+  verseImageStory: 'Story 9:16',
+  verseImageStyle: 'Style',
+  verseImageFont: 'Font',
+  verseImageSerif: 'Classic',
+  verseImageSans: 'Modern',
+  verseImageSize: 'Size',
+  verseImageDownload: 'Download image',
+  verseImageShare: 'Share',
+  verseImageCopy: 'Copy image',
+  verseImageCopied: 'Image copied to clipboard',
 };
 
 export default en;

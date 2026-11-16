@@ -326,6 +326,20 @@ const fr: Messages = {
   studyType: 'Type d’élément',
   concordance: 'Concordance thématique',
   searchTopics: 'Rechercher un thème (ex. refuge, grâce)...',
+  verseImage: 'Créer une image',
+  verseImageTitle: 'Partager en image',
+  verseImageFormat: 'Format',
+  verseImageSquare: 'Carré 1:1',
+  verseImageStory: 'Story 9:16',
+  verseImageStyle: 'Style',
+  verseImageFont: 'Police',
+  verseImageSerif: 'Classique',
+  verseImageSans: 'Moderne',
+  verseImageSize: 'Taille',
+  verseImageDownload: 'Télécharger l’image',
+  verseImageShare: 'Partager',
+  verseImageCopy: 'Copier l’image',
+  verseImageCopied: 'Image copiée dans le presse-papiers',
 };
 
 export default fr;
