@@ -8,6 +8,7 @@ export interface Bookmark {
   verse?: number;
   label?: string;
   createdAt: number;
+  updatedAt?: number;
 }
 
 const STORAGE_KEY = 'ob:bookmarks';
@@ -29,9 +30,10 @@ export const useBookmarks = create<BookmarksState>((set, get) => ({
 
   addBookmark: (book, chapter, verse, label) => {
     const id = makeBookmarkId(book, chapter, verse);
+    const now = Date.now();
     set((s) => {
       const existing = s.bookmarks.filter((b) => b.id !== id);
-      const updated = [{ id, book, chapter, verse, label, createdAt: Date.now() }, ...existing];
+      const updated = [{ id, book, chapter, verse, label, createdAt: now, updatedAt: now }, ...existing];
       setJson(STORAGE_KEY, updated);
       return { bookmarks: updated };
     });
@@ -63,8 +65,9 @@ export const useBookmarks = create<BookmarksState>((set, get) => ({
   },
 
   updateLabel: (id, label) => {
+    const now = Date.now();
     set((s) => {
-      const updated = s.bookmarks.map((b) => (b.id === id ? { ...b, label: label.trim() || undefined } : b));
+      const updated = s.bookmarks.map((b) => (b.id === id ? { ...b, label: label.trim() || undefined, updatedAt: now } : b));
       setJson(STORAGE_KEY, updated);
       return { bookmarks: updated };
     });

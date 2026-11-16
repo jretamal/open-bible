@@ -6,10 +6,11 @@ import { dbDelete, dbPut } from './db';
 import { savePosition } from './state/position';
 import { DEFAULTS, useSettings, type Settings } from './state/settings';
 import { useStudy, type Highlight, type Like, type Note } from './state/study';
+import { useBookmarks, type Bookmark } from './state/bookmarks';
 import { getItem, getJson, removeItem, setItem, setJson } from './storage';
 
-type Col = 'notes' | 'highlights' | 'likes';
-type Item = Note | Highlight | Like;
+type Col = 'notes' | 'highlights' | 'likes' | 'bookmarks';
+type Item = Note | Highlight | Like | Bookmark;
 type StudyState = ReturnType<typeof useStudy.getState>;
 
 const DIRTY = 'ob:sync-dirty';
@@ -28,7 +29,13 @@ const dirtyKey = (col: Col, id: string) => `${col}/${id}`;
 
 /** What the device holds for a collection, by id. */
 const localItems = (st: StudyState, name: Col): Map<string, Item> =>
-  name === 'notes' ? new Map(st.notes.map((n) => [n.id, n])) : name === 'highlights' ? new Map(Object.entries(st.highlights)) : new Map(Object.entries(st.likes));
+  name === 'notes'
+    ? new Map(st.notes.map((n) => [n.id, n]))
+    : name === 'highlights'
+    ? new Map(Object.entries(st.highlights))
+    : name === 'likes'
+    ? new Map(Object.entries(st.likes))
+    : new Map(useBookmarks.getState().bookmarks.map((b) => [b.id, b]));
 
 
 const withTimeout = <T>(p: Promise<T>) =>
@@ -119,6 +126,8 @@ async function wipeLocal() {
   applying = true;
   try {
     useStudy.setState({ highlights: {}, notes: [], likes: {} });
+    useBookmarks.setState({ bookmarks: [] });
+    removeItem('ob:bookmarks');
     await Promise.all([dbDelete('highlights', Object.keys(highlights)), dbDelete('notes', notes.map((n) => n.id)), dbDelete('likes', Object.keys(likes))]);
   } catch {
     /* whatever is left is overwritten by the merge */
@@ -147,15 +156,23 @@ function parseRemote(id: string, raw: Record<string, unknown>): Remote<Item> {
 
 /** Pulls from the cloud everything newer than the local copy and applies it to the device. Then uploads what only exists here or is newer. */
 async function pullAll(s: Session) {
-  const [notesSnap, hlSnap, likesSnap, prefsSnap] = await withTimeout(
-    Promise.all([s.fs.getDocs(col(s, 'notes')), s.fs.getDocs(col(s, 'highlights')), s.fs.getDocs(col(s, 'likes')), s.fs.getDoc(s.fs.doc(s.db, 'users', s.uid, 'meta', 'prefs'))]),
+  const [notesSnap, hlSnap, likesSnap, bookmarksSnap, prefsSnap] = await withTimeout(
+    Promise.all([
+      s.fs.getDocs(col(s, 'notes')),
+      s.fs.getDocs(col(s, 'highlights')),
+      s.fs.getDocs(col(s, 'likes')),
+      s.fs.getDocs(col(s, 'bookmarks')),
+      s.fs.getDoc(s.fs.doc(s.db, 'users', s.uid, 'meta', 'prefs')),
+    ]),
   );
   const remoteNotes = notesSnap.docs.map((d) => parseRemote(d.id, d.data()));
   const remoteHl = hlSnap.docs.map((d) => parseRemote(d.id, d.data()));
   const remoteLikes = likesSnap.docs.map((d) => parseRemote(d.id, d.data()));
+  const remoteBookmarks = bookmarksSnap.docs.map((d) => parseRemote(d.id, d.data()));
   await applyRemote('notes', remoteNotes);
   await applyRemote('highlights', remoteHl);
   await applyRemote('likes', remoteLikes);
+  await applyRemote('bookmarks', remoteBookmarks);
 
   // What exists only on this device, or is newer than the cloud, needs to go up.
   const st = useStudy.getState();
@@ -163,10 +180,12 @@ async function pullAll(s: Session) {
   const rn = known(remoteNotes);
   const rh = known(remoteHl);
   const rl = known(remoteLikes);
+  const rb = known(remoteBookmarks);
   const up: string[] = [];
   for (const n of st.notes) if ((rn.get(n.id)?.at ?? -1) < stamp(n)) up.push(dirtyKey('notes', n.id));
   for (const h of Object.values(st.highlights)) if ((rh.get(h.key)?.at ?? -1) < stamp(h)) up.push(dirtyKey('highlights', h.key));
   for (const l of Object.values(st.likes)) if ((rl.get(l.key)?.at ?? -1) < stamp(l)) up.push(dirtyKey('likes', l.key));
+  for (const b of useBookmarks.getState().bookmarks) if ((rb.get(b.id)?.at ?? -1) < stamp(b)) up.push(dirtyKey('bookmarks', b.id));
   markDirty(up);
 
   applyPrefs(prefsSnap.exists() ? (prefsSnap.data() as Record<string, unknown>) : null, true);
@@ -199,9 +218,16 @@ async function applyRemote(name: Col, items: Remote<Item>[]) {
   try {
     if (name === 'notes') useStudy.setState({ notes: [...local.values()] as Note[] });
     else if (name === 'highlights') useStudy.setState({ highlights: Object.fromEntries(local) as Record<string, Highlight> });
-    else useStudy.setState({ likes: Object.fromEntries(local) as Record<string, Like> });
-    if (put.length) await dbPut(name, put).catch(() => undefined);
-    if (del.length) await dbDelete(name, del).catch(() => undefined);
+    else if (name === 'likes') useStudy.setState({ likes: Object.fromEntries(local) as Record<string, Like> });
+    else {
+      const bmarks = [...local.values()] as Bookmark[];
+      useBookmarks.setState({ bookmarks: bmarks });
+      setJson('ob:bookmarks', bmarks);
+    }
+    if (name !== 'bookmarks') {
+      if (put.length) await dbPut(name, put).catch(() => undefined);
+      if (del.length) await dbDelete(name, del).catch(() => undefined);
+    }
   } finally {
     applying = false;
   }
@@ -239,7 +265,12 @@ async function flush(s: Session) {
   if (!dirty.length && !pendingPrefs) return;
   onStatus('syncing');
   const st = useStudy.getState();
-  const items = { notes: localItems(st, 'notes'), highlights: localItems(st, 'highlights'), likes: localItems(st, 'likes') };
+  const items: Record<Col, Map<string, Item>> = {
+    notes: localItems(st, 'notes'),
+    highlights: localItems(st, 'highlights'),
+    likes: localItems(st, 'likes'),
+    bookmarks: localItems(st, 'bookmarks'),
+  };
   const sent = new Map<string, unknown>();
   const now = Date.now();
   try {
@@ -319,6 +350,21 @@ function watchLocal(s: Session, cleanups: (() => void)[]) {
     if (now.book !== prev.book || now.chapter !== prev.chapter) queuePrefs();
   });
 
+  const offBookmarks = useBookmarks.subscribe((now, prev) => {
+    if (applying) return;
+    const dirty: string[] = [];
+    if (now.bookmarks !== prev.bookmarks) {
+      const before = new Map(prev.bookmarks.map((b) => [b.id, b]));
+      const after = new Map(now.bookmarks.map((b) => [b.id, b]));
+      for (const [id, b] of after) if (before.get(id) !== b) dirty.push(dirtyKey('bookmarks', id));
+      for (const id of before.keys()) if (!after.has(id)) dirty.push(dirtyKey('bookmarks', id));
+    }
+    if (dirty.length) {
+      markDirty(dirty);
+      schedule();
+    }
+  });
+
   const queuePrefs = () => {
     touchPrefs();
     clearTimeout(prefsTimer);
@@ -333,7 +379,7 @@ function watchLocal(s: Session, cleanups: (() => void)[]) {
     if (PREF_KEYS.some((k) => now[k] !== prev[k])) queuePrefs();
   });
 
-  cleanups.push(offStudy, offSettings, () => {
+  cleanups.push(offStudy, offBookmarks, offSettings, () => {
     clearTimeout(flushTimer);
     clearTimeout(prefsTimer);
   });
@@ -358,6 +404,7 @@ function watchRemote(s: Session, cleanups: (() => void)[]) {
     listen('notes'),
     listen('highlights'),
     listen('likes'),
+    listen('bookmarks'),
     s.fs.onSnapshot(
       s.fs.doc(s.db, 'users', s.uid, 'meta', 'prefs'),
       (snap) => {
